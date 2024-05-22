@@ -118,10 +118,10 @@ public class PERSEGI extends javax.swing.JFrame {
                     .addComponent(tsisi, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(thitung)
                     .addComponent(treset)
-                    .addComponent(tkembali))
+                    .addComponent(tkembali, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(tluas)
                 .addGap(18, 18, 18)
@@ -134,6 +134,7 @@ public class PERSEGI extends javax.swing.JFrame {
 
     private void tkembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tkembaliActionPerformed
         // TODO add your handling code here:
+        new home().setVisible(true);
     }//GEN-LAST:event_tkembaliActionPerformed
 
     private void thitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thitungActionPerformed

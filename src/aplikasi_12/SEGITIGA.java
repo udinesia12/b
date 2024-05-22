@@ -18,8 +18,10 @@ public class SEGITIGA extends javax.swing.JFrame {
         treset();
     }
     void treset(){
-        
-    
+     tsisi.setText("");
+     ttinggi.setText(null);
+     tluas.setText(null);
+     tkeliling.setText(null);
     }
 
     /**
@@ -31,31 +33,33 @@ public class SEGITIGA extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        tluas = new javax.swing.JLabel();
+        tkeliling = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         tkembali = new javax.swing.JButton();
         treset = new javax.swing.JButton();
         thitung = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        talas = new javax.swing.JTextField();
+        tsisi = new javax.swing.JTextField();
         ttinggi = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setText("ALAS");
+        tluas.setText("LUAS :");
 
-        jLabel2.setText("LUAS :");
-
-        jLabel3.setText("KELILING   :");
+        tkeliling.setText("KELILING   :");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("SEGITIGA");
 
         tkembali.setBackground(new java.awt.Color(204, 204, 255));
         tkembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasi_12/back-arrow.png"))); // NOI18N
+        tkembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tkembaliActionPerformed(evt);
+            }
+        });
 
         treset.setBackground(new java.awt.Color(204, 204, 255));
         treset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasi_12/go-back-arrow.png"))); // NOI18N
@@ -73,10 +77,7 @@ public class SEGITIGA extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("TINGGI");
-
-        talas.setBackground(new java.awt.Color(204, 204, 255));
+        tsisi.setBackground(new java.awt.Color(204, 204, 255));
 
         ttinggi.setBackground(new java.awt.Color(204, 204, 255));
         ttinggi.addActionListener(new java.awt.event.ActionListener() {
@@ -85,35 +86,41 @@ public class SEGITIGA extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("luas persegi");
+
+        jLabel6.setText("sisi");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(thitung)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tkeliling)
+                            .addComponent(tluas)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(58, 58, 58)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(treset)
+                        .addGap(77, 77, 77)
+                        .addComponent(tkembali))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
+                        .addComponent(ttinggi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(thitung)
-                                .addGap(76, 76, 76)
-                                .addComponent(treset)
-                                .addGap(65, 65, 65)
-                                .addComponent(tkembali)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel5)
-                            .addGap(76, 76, 76)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addGap(73, 73, 73))
-                                .addComponent(talas)
-                                .addComponent(ttinggi)))))
-                .addContainerGap(125, Short.MAX_VALUE))
+                                .addComponent(jLabel4)
+                                .addGap(73, 73, 73))
+                            .addComponent(tsisi))))
+                .addGap(0, 95, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,27 +129,24 @@ public class SEGITIGA extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(talas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ttinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(treset, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(thitung, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(tkembali, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(20, 20, 20)
-                .addComponent(jLabel2)
+                    .addComponent(tsisi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(41, 41, 41))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ttinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(thitung)
+                            .addComponent(treset))
+                        .addGap(34, 34, 34)
+                        .addComponent(tluas)
+                        .addGap(18, 18, 18)
+                        .addComponent(tkeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tkembali))
+                .addGap(18, 18, 18))
         );
 
         pack();
@@ -150,6 +154,12 @@ public class SEGITIGA extends javax.swing.JFrame {
 
     private void thitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thitungActionPerformed
         // TODO add your handling code here:
+        double tsisi = Double.parseDouble(this.tsisi.getText());
+        double tluas = 0.433*tsisi*tsisi;
+        double tkeliling = tsisi*3;
+        
+        this.tluas.setText("luas =" +tluas);
+        this.tkeliling.setText("keliling =" +tkeliling);
         
     }//GEN-LAST:event_thitungActionPerformed
 
@@ -161,6 +171,11 @@ public class SEGITIGA extends javax.swing.JFrame {
         // TODO add your handling code here:
         treset();
     }//GEN-LAST:event_tresetActionPerformed
+
+    private void tkembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tkembaliActionPerformed
+        // TODO add your handling code here:
+        new home().setVisible(true);
+    }//GEN-LAST:event_tkembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,14 +214,18 @@ public class SEGITIGA extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField talas;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JButton thitung;
+    private javax.swing.JLabel tkeliling;
     private javax.swing.JButton tkembali;
+    private javax.swing.JLabel tluas;
     private javax.swing.JButton treset;
+    private javax.swing.JTextField tsisi;
     private javax.swing.JTextField ttinggi;
     // End of variables declaration//GEN-END:variables
+
+    private void setText(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

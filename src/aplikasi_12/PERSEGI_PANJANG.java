@@ -60,8 +60,18 @@ public class PERSEGI_PANJANG extends javax.swing.JFrame {
         jLabel3.setText("PANJANG");
 
         tpanjang.setBackground(new java.awt.Color(204, 204, 255));
+        tpanjang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tpanjangActionPerformed(evt);
+            }
+        });
 
         tlebar.setBackground(new java.awt.Color(204, 204, 255));
+        tlebar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tlebarActionPerformed(evt);
+            }
+        });
 
         treset.setBackground(new java.awt.Color(204, 204, 255));
         treset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasi_12/go-back-arrow.png"))); // NOI18N
@@ -142,10 +152,10 @@ public class PERSEGI_PANJANG extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(tpanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(treset)
                     .addComponent(tkembali)
-                    .addComponent(thitung))
+                    .addComponent(thitung, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addComponent(tluas)
                 .addGap(18, 18, 18)
@@ -174,8 +184,16 @@ public class PERSEGI_PANJANG extends javax.swing.JFrame {
 
     private void tkembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tkembaliActionPerformed
         // TODO add your handling code here:
-        
+        new home().setVisible(true);
     }//GEN-LAST:event_tkembaliActionPerformed
+
+    private void tlebarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tlebarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tlebarActionPerformed
+
+    private void tpanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tpanjangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tpanjangActionPerformed
 
     /**
      * @param args the command line arguments
